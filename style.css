@@ -1,0 +1,285 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    cursor: default;
+}
+
+h1{
+    font-family: 'Ruthie', cursive;
+    font-size: 150px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: lighter;
+}
+
+header  a{
+    text-decoration: none;
+    color: #eee;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom,rgba(0,0,0,.8), rgba(0,0,0,.5)), url("images/35.jpg") center no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    max-width: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    background-color: rgba(30, 0, 49, 0.363);
+}
+
+li{
+    padding: 0 200px;
+    list-style: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    display: flex;
+}
+
+nav li{
+    transform: translateX(-200rem);
+    animation: slideIn .5s forwards;
+}
+
+nav li:nth-child(1){
+    animation-delay: 0s; 
+}
+nav li:nth-child(2){
+    animation-delay: .5s; 
+}
+nav li:nth-child(3){
+    animation-delay: 1s; 
+}
+
+nav li a{
+    padding: .3rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+nav li a::before,
+nav li a::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(157, 20, 220);
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav li a::before{
+    top: 0;
+    transform-origin: left;
+}
+
+nav li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav li a:hover::before,
+nav li a:hover::after{
+    transform: scaleX(1);
+}
+
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#home{
+    top: 0;
+    min-height: 55vh;
+    padding-top: 45vh;
+    color: rgba(255, 255, 255, 0.281);
+    cursor: default;    
+}
+
+.trail {
+    position: absolute;
+    height: 3px; width: 3px;
+    border-radius: 0px;
+    background: rgba(187, 187, 187, 0.452);
+    border-top: 3in;
+}
+/* This section is for the "h3" elements */
+.sub-title a{
+    font-size: 35px;
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: default;
+    padding-left: 15px;
+}
+.sub-title a::before{
+    content:'';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+}
+
+.relative{
+    position: relative;
+    overflow: hidden;
+}
+
+a span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #120b20, #bd17ff);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    0%
+    {
+        transform: translateX(-100%)
+    }
+    100%
+    {
+        transform: translateX(100%)
+    }
+}
+
+a span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #120b20, #bd17ff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2{
+    0%
+    {
+        transform: translateY(-100%)
+    }
+    100%
+    {
+        transform: translateY(100%)
+    }
+}
+
+
+
+a span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #120b20, #bd17ff);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+    0%
+    {
+        transform: translateX(100%)
+    }
+    100%
+    {
+        transform: translateX(-100%)
+    }
+}
+
+a span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #120b20, #bd17ff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4{
+    0%
+    {
+        transform: translateY(100%)
+    }
+    100%
+    {
+        transform: translateY(-100%)
+    }
+}
+/* Text format */
+p{
+    font-size: 18px;
+    padding-top: 30px;
+    color: rgb(207, 207, 207);
+    text-align: justify;
+    font-weight: lighter;  
+}
+#content{
+    padding: 75px 41%;
+}
+#about{
+    padding: 75px 41%;
+}
+
+/* Background sections */
+.text{
+    background: linear-gradient(to bottom, #120b20, #22163f)
+}
+
+.section{
+    height: 980px;
+
+}
+
+.paragraphs{
+    font-size: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative; 
+}
+
+b{
+    font-weight: bold;
+}
+
+#meme{
+    align-content: center;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 10px;
+}
